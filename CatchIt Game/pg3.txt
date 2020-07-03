@@ -1,0 +1,40 @@
+import java.awt.*;
+
+public class gamectrl extends Frame
+{
+	setLayout(new GridLayout(7,2,3,3));
+	Label l1,l2,l3,l4,l5,l6;
+	Button b1;
+	Panel p1;
+	gamectrl()
+	{
+	l1=new Label("GAME CONTROLS:");
+	l2=new Label("A	To move left");
+	l3=new Label("D	To move right");
+	l4=new Label("W	To move Up");
+	l5=new Label("S	To move down");
+	l6=new Label("X	Shoot bullets);
+	b1=new Button("Back");
+	p1.add(l1);
+	p1.add(l2);
+	p1.add(l3);
+	p1.add(l4);
+	p1.add(l5);
+	p1.add(l6);
+	p1.add(b1);
+	add(p1);
+	b1.addActionListener(this);
+	}
+
+public void actionPerformed(ActionEvent ae)
+{
+	if(ae.getSource()==b1)
+	{
+		new gamepg1();
+	}
+}
+public static void main(String arg[])
+{
+	new gamectrl();
+}
+}
